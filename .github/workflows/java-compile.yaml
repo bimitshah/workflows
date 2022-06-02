@@ -1,0 +1,10 @@
+name: "build"
+
+runs:
+  using: "composite"
+  steps:
+    - run: "echo 'java-compile'"
+      shell: bash
+    - name: build
+      run: |
+        ./mvnw clean package

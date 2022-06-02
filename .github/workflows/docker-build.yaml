@@ -1,0 +1,10 @@
+name: "docker-build"
+
+runs:
+  using: "composite"
+  steps:
+    - run: echo 'docker-build'
+      shell: bash
+    - name: docker-build
+      run: |
+        docker build -t local/demo .

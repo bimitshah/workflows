@@ -1,0 +1,11 @@
+name: docker-lint
+
+runs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: hadolint/hadolint
+  steps:
+    - name: docker-lint
+      run: |
+        hadolint Dockerfile
