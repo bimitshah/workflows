@@ -6,5 +6,6 @@ runs:
     - run: echo 'docker-build'
       shell: bash
     - name: docker-build
+      shell: bash
       run: |
         docker build -t local/demo .

@@ -6,5 +6,6 @@ runs:
     - run: "echo 'java-compile'"
       shell: bash
     - name: build
+      shell: bash
       run: |
         ./mvnw clean package
