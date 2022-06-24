@@ -7,9 +7,7 @@ jobs:
   test:
     runs-on: ubuntun-latest
     outputs:
-      name_wrapper:
-        description: "test_wrapper"
-        value: ${{ steps.build_wrapper.outputs.name }}
+      name_wrapper: ${{ steps.build_wrapper.outputs.name }}
     steps:
       - id: build_wrapper
         uses: bimitshah/workflows/test-build@main
