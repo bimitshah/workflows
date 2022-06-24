@@ -1,0 +1,14 @@
+name: "test-build"
+
+outputs:
+  name:
+    description: "push image name"
+    value: ${{ steps.build.outputs.name }}
+runs:
+  using: "composite"
+  steps:
+    - name: build
+      shell: bash
+      id: build
+      run: |
+        echo "::set-output name=image::test:latest"
