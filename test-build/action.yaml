@@ -1,9 +1,9 @@
 name: "test-build"
 
 outputs:
-  name:
+  image:
     description: "push image name"
-    value: ${{ steps.build.outputs.name }}
+    value: ${{ steps.build.outputs.image }}
 runs:
   using: "composite"
   steps:

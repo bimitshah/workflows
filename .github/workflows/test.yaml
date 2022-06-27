@@ -2,12 +2,16 @@ name: test
 
 on:
   workflow_call:
+    outputs:
+      name_wrapper:
+        description: "The first output string"
+        value: ${{ jobs.test.outputs.name_wrapper }}
 
 jobs:
   test:
     runs-on: ubuntu-latest
     outputs:
-      name_wrapper: ${{ steps.build_wrapper.outputs.name }}
+      name_wrapper: ${{ steps.build_wrapper.outputs.image }}
     steps:
       - id: build_wrapper
         uses: bimitshah/workflows/test-build@main
