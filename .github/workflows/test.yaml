@@ -5,7 +5,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntun-latest
+    runs-on: ubuntu-latest
     outputs:
       name_wrapper: ${{ steps.build_wrapper.outputs.name }}
     steps:
