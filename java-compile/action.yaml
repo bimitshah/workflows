@@ -1,11 +1,14 @@
 name: "java-compile"
 
+outputs:
+  image:
+    description: "push image name"
+    value: ${{ steps.build.outputs.image }}
 runs:
   using: "composite"
   steps:
-    - run: "echo 'java-compile'"
-      shell: bash
     - name: build
       shell: bash
+      id: build
       run: |
-        ./mvnw clean package
+        echo "::set-output name=image::test:latest"
