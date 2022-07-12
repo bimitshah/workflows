@@ -6,6 +6,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    outputs:
+      image: ${{ steps.build_wrapper.outputs.image }}
     steps:
       - id: build_wrapper
         uses: bimitshah/workflows/test-build@main
