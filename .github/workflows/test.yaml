@@ -2,6 +2,10 @@ name: test
 
 on:
   workflow_call:
+    outputs:
+      image:
+        description: "The first output string"
+        value: ${{ jobs.test.outputs.image }}
 
 jobs:
   test:
